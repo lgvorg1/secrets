@@ -125,8 +125,8 @@ jobs:
           pwd
           ls -al
           #${GITHUB_WORKSPACE}/scanner/xygeni secrets --history --upload  --all-files     --never-fail --no-conf-download -n ${{ env.XY_PRJ_NAME }}_secret --dir ${GITHUB_WORKSPACE}/src 
-          ${GITHUB_WORKSPACE}/scanner/xygeni scan --run="secrets"  --secrets-mode=history                   --never-fail --no-conf-download -n ${{ env.XY_PRJ_NAME }}_run    --dir ${GITHUB_WORKSPACE}/src 
-          
+          ${GITHUB_WORKSPACE}/scanner/xygeni scan --run="secrets"                    --never-fail --no-conf-download -n ${{ env.XY_PRJ_NAME }}_run    --dir ${GITHUB_WORKSPACE}/src 
+          #--secrets-mode=history 
           exit 1
 
           XY_PARAM_INCLUDE_GIT_HISTORY=""
